@@ -1,4 +1,5 @@
 import { createBrowserHistory } from "history";
+import { ChakraProvider } from "@chakra-ui/react";
 import { Router, Route, Switch } from "react-router-dom";
 // pages for this product
 import HomePage from "./pages/HomePage/HomePage";
@@ -10,14 +11,16 @@ const hist = createBrowserHistory();
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Router history={hist}>
-        <Switch>
-          <Route path="/" component={HomePage} />
-        </Switch>
-      </Router>
-    </div>
+    <ChakraProvider>
+      <div>
+        <NavBar />
+        <Router history={hist}>
+          <Switch>
+            <Route path="/" component={HomePage} />
+          </Switch>
+        </Router>
+      </div>
+    </ChakraProvider>
   );
 }
 
