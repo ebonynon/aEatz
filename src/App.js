@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage/HomePage";
 
 // core components for this product
 import NavBar from "./components/common/Navbar";
+import Parallax from "./components/common/Parallax";
 
 const hist = createBrowserHistory();
 
@@ -14,6 +15,7 @@ function App() {
     <ChakraProvider>
       <div>
         <NavBar />
+        <Parallax />
         <Router history={hist}>
           <Switch>
             <Route path="/" component={HomePage} />
