@@ -28,7 +28,7 @@ export default function NavBar() {
     >
       <Flex w={["100vw", "100vw", "80vw", "80vw"]} justify="space-around">
         <Box>
-          <Image h="4vh" src="../../logo.svg" alt="Logo of Chakra-ui" />
+          <Image h="4vh" src="https://i.postimg.cc/6Q2mG0fX/logo-01.png" alt="Logo of Chakra-ui" />
         </Box>
         <Stack
           spacing={8}
@@ -42,31 +42,31 @@ export default function NavBar() {
             opacity={window.location.pathname !== "/" ? 0.4 : 1}
           >
             <Link href="/">
-              <a>Home</a>
+              <a>Restaurants</a>
             </Link>
           </Box>
           <Box
             position="relative"
-            opacity={window.location.pathname !== "/form" ? 0.4 : 1}
+            opacity={window.location.pathname !== "/food-items" ? 0.4 : 1}
           >
-            <Link to="/form">
-              <a>Form</a>
+            <Link to="/food-items">
+              <a>Food Iteams</a>
             </Link>
           </Box>
           <Box
             position="relative"
-            opacity={window.location.pathname !== "/card" ? 0.4 : 1}
+            opacity={window.location.pathname !== "/customers" ? 0.4 : 1}
           >
-            <Link href="/card">
-              <a>Card</a>
+            <Link href="/customers">
+              <a>Customers</a>
             </Link>
           </Box>
           <Box
             position="relative"
-            opacity={window.location.pathname !== "/list" ? 0.4 : 1}
+            opacity={window.location.pathname !== "/orders" ? 0.4 : 1}
           >
-            <Link href="/list">
-              <a>List</a>
+            <Link href="/orders">
+              <a>Orders</a>
             </Link>
           </Box>
         </Stack>
