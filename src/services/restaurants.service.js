@@ -14,3 +14,7 @@ export function GetARestaurant() {
     .catch((err) => console.error(err));
   return array;
 }
+
+export function AddARestaurant(data) {
+  console.log(data);
+}

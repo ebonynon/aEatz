@@ -1,4 +1,6 @@
 import React from "react";
+import { useFormik } from "formik";
+import { useState, useRef } from "react";
 import {
   Box,
   Grid,
@@ -6,6 +8,7 @@ import {
   Button,
   useDisclosure,
   Input,
+  Stack,
   Drawer,
   DrawerBody,
   DrawerFooter,
@@ -15,9 +18,40 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
+import { RestaurantsService } from "../../services";
 export default function AddComponent() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
+  const btnRef = useRef();
+  const [form, setValue] = useState({
+    ResID: "",
+    Name: "",
+    Phone: "",
+    Location: "",
+    ImgURL: "",
+  });
+  const updateField = (e) => {
+    setValue({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const onAdd = (e) => {
+    RestaurantsService.AddARestaurant(e);
+  };
+  const formik = useFormik({
+    initialValues: {
+      ResID: "",
+      Name: "",
+      Phone: "",
+      Location: "",
+      ImgURL: "",
+    },
+
+    onSubmit: (values) => {
+      //alert(JSON.stringify(values, null, 2));
+      RestaurantsService.AddARestaurant(values);
+    },
+  });
   return (
     <>
       <Box borderWidth="1px" borderRadius="lg" margin={1} w="100%" p={1}>
@@ -40,13 +74,46 @@ export default function AddComponent() {
             <DrawerCloseButton />
             <DrawerHeader>Add New Restaurant</DrawerHeader>
             <DrawerBody>
-              <Input placeholder="Type here..." />
+              <Stack spacing={1}>
+                <Input
+                  id="ResID"
+                  placeholder="ResID"
+                  value={formik.values.ResID}
+                  onChange={formik.handleChange}
+                />
+                <Input
+                  id="Name"
+                  placeholder="Name"
+                  value={formik.values.Name}
+                  onChange={formik.handleChange}
+                />
+                <Input
+                  id="Phone"
+                  placeholder="Phone"
+                  value={formik.values.Phone}
+                  onChange={formik.handleChange}
+                />
+                <Input
+                  id="Location"
+                  placeholder="Location"
+                  value={formik.values.Location}
+                  onChange={formik.handleChange}
+                />
+                <Input
+                  id="ImgURL"
+                  placeholder="ImgURL"
+                  value={formik.values.ImgURL}
+                  onChange={formik.handleChange}
+                />
+              </Stack>
             </DrawerBody>
             <DrawerFooter>
               <Button variant="outline" mr={3} onClick={onClose}>
                 Cancel
               </Button>
-              <Button color="blue">Add</Button>
+              <Button color="blue" onClick={formik.handleSubmit}>
+                Add
+              </Button>
             </DrawerFooter>
           </DrawerContent>
         </DrawerOverlay>
