@@ -18,7 +18,6 @@ export default function NavBar() {
     <Flex
       w="100vw"
       bg={bgColor[colorMode]}
-      align="center"
       color={textColor[colorMode]}
       justify="center"
       align="center"
