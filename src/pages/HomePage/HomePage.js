@@ -5,6 +5,7 @@ import { useQuery } from "react-query";
 import { environment } from "../../configs/environment";
 //import "react-table/react-table.css";
 import TableComponent from "../../components/HomePage/Table";
+import AddComponent from "../../components/HomePage/Add";
 
 export default function HomePage() {
   const { isLoading, error, data } = useQuery("repoData", () =>
@@ -25,6 +26,7 @@ export default function HomePage() {
   return (
     <Flex justify="center" align="center" p={4}>
       <Box p={1} color="white">
+        <AddComponent />
         {table}
       </Box>
     </Flex>
