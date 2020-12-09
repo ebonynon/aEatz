@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import {
   Box,
   Grid,
@@ -22,22 +22,6 @@ import { RestaurantsService } from "../../services";
 export default function AddComponent() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
-  const [form, setValue] = useState({
-    ResID: "",
-    Name: "",
-    Phone: "",
-    Location: "",
-    ImgURL: "",
-  });
-  const updateField = (e) => {
-    setValue({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
-  const onAdd = (e) => {
-    RestaurantsService.AddARestaurant(e);
-  };
   const formik = useFormik({
     initialValues: {
       ResID: "",
@@ -48,7 +32,6 @@ export default function AddComponent() {
     },
 
     onSubmit: (values) => {
-      //alert(JSON.stringify(values, null, 2));
       RestaurantsService.AddARestaurant(values);
     },
   });
