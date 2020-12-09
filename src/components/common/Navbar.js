@@ -14,6 +14,7 @@ export default function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = { light: "gray.300", dark: "gray.600" };
   const textColor = { light: "black", dark: "gray.100" };
+  const imgColor = { dark: "gray.700" };
   return (
     <Flex
       w="100vw"
@@ -32,6 +33,7 @@ export default function NavBar() {
             h="4vh"
             src="https://i.postimg.cc/6Q2mG0fX/logo-01.png"
             alt="Logo of Chakra-ui"
+            bg={imgColor[colorMode]}
           />
         </Box>
         <Stack
