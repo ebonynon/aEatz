@@ -7,6 +7,7 @@ import {
   Image,
   Link,
 } from "@chakra-ui/react";
+import { Link as ReachLink } from "react-router-dom";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export default function NavBar() {
@@ -28,7 +29,11 @@ export default function NavBar() {
     >
       <Flex w={["100vw", "100vw", "80vw", "80vw"]} justify="space-around">
         <Box>
-          <Image h="4vh" src="https://i.postimg.cc/6Q2mG0fX/logo-01.png" alt="Logo of Chakra-ui" />
+          <Image
+            h="4vh"
+            src="https://i.postimg.cc/6Q2mG0fX/logo-01.png"
+            alt="Logo of Chakra-ui"
+          />
         </Box>
         <Stack
           spacing={8}
@@ -39,33 +44,37 @@ export default function NavBar() {
         >
           <Box
             position="relative"
-            opacity={window.location.pathname !== "/" ? 0.4 : 1}
+            //opacity={window.location.pathname !== "/" ? 0.4 : 1}
+            opacity={1}
           >
-            <Link href="/">
+            <Link as={ReachLink} to="/">
               <a>Restaurants</a>
             </Link>
           </Box>
           <Box
             position="relative"
-            opacity={window.location.pathname !== "/food-items" ? 0.4 : 1}
+            //opacity={window.location.pathname !== "/food-items" ? 0.4 : 1}
+            opacity={1}
           >
-            <Link to="/food-items">
-              <a>Food Iteams</a>
+            <Link as={ReachLink} to="/food-items">
+              <a>Food Items</a>
             </Link>
           </Box>
           <Box
             position="relative"
-            opacity={window.location.pathname !== "/customers" ? 0.4 : 1}
+            //opacity={window.location.pathname !== "/customers" ? 0.4 : 1}
+            opacity={1}
           >
-            <Link href="/customers">
+            <Link as={ReachLink} to="/customers">
               <a>Customers</a>
             </Link>
           </Box>
           <Box
             position="relative"
-            opacity={window.location.pathname !== "/orders" ? 0.4 : 1}
+            //opacity={window.location.pathname !== "/orders" ? 0.4 : 1}
+            opacity={1}
           >
-            <Link href="/orders">
+            <Link as={ReachLink} to="/orders">
               <a>Orders</a>
             </Link>
           </Box>
