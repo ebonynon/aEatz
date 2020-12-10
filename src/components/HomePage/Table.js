@@ -1,5 +1,6 @@
 import { Box, Grid, useColorMode, IconButton } from "@chakra-ui/react";
-import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
+import { DeleteIcon } from "@chakra-ui/icons";
+import EditComponent from "./Edit";
 export default function TableComponent(props) {
   const value = props.vl;
   const { colorMode } = useColorMode();
@@ -30,12 +31,7 @@ export default function TableComponent(props) {
           {value.Phone}
         </Box>
         <Box align="center">
-          <IconButton
-            rounded="full"
-            //onClick={}
-            icon={<EditIcon />}
-            bg={boxColor[colorMode]}
-          />
+          <EditComponent vl={value} />
         </Box>
         <Box align="center">
           <IconButton
