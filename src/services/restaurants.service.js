@@ -23,3 +23,11 @@ export function AddARestaurant(data) {
     .then((res) => console.log(res.status))
     .catch((err) => console.log(err.message));
 }
+
+export function UpdateARestaurant(id, data) {
+  console.log(data);
+  axios
+    .put(environment.baseURL + "/restaurants/" + id, data)
+    .then((res) => console.log(res.status))
+    .catch((err) => console.log(err.message));
+}

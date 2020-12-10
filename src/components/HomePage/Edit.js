@@ -34,7 +34,7 @@ export default function EditComponent(props) {
     },
 
     onSubmit: (values) => {
-      RestaurantsService.AddARestaurant(values);
+      RestaurantsService.UpdateARestaurant(gData.ID, values);
     },
   });
   return (
