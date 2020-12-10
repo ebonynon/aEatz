@@ -28,14 +28,16 @@ export default function NavBar() {
       p={2}
     >
       <Flex w={["100vw", "100vw", "80vw", "80vw"]} justify="space-around">
-        <Box>
-          <Image
-            h="4vh"
-            src="https://i.postimg.cc/6Q2mG0fX/logo-01.png"
-            alt="Logo of Chakra-ui"
-            bg={imgColor[colorMode]}
-          />
-        </Box>
+        <Link as={ReachLink} to="/">
+          <Box>
+            <Image
+              h="4vh"
+              src="https://i.postimg.cc/6Q2mG0fX/logo-01.png"
+              alt="Logo of xEatz"
+              bg={imgColor[colorMode]}
+            />
+          </Box>{" "}
+        </Link>
         <Stack
           spacing={8}
           color={textColor[colorMode]}
