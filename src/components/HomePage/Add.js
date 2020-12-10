@@ -31,8 +31,9 @@ export default function AddComponent() {
       ImgURL: "",
     },
 
-    onSubmit: (values) => {
-      RestaurantsService.AddARestaurant(values);
+    onSubmit: async (values, { resetForm }) => {
+      await RestaurantsService.AddARestaurant(values);
+      resetForm({});
     },
   });
   return (

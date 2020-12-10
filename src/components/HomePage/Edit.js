@@ -33,8 +33,11 @@ export default function EditComponent(props) {
       ImgURL: gData.ImgURL,
     },
 
-    onSubmit: (values) => {
-      RestaurantsService.UpdateARestaurant(gData.ID, values);
+    onSubmit: async (values, { resetForm }) => {
+      await RestaurantsService.UpdateARestaurant(gData.ID, values);
+      resetForm({
+        values: { ResID: "", Name: "", Phone: "", Location: "", ImgURL: "" },
+      });
     },
   });
   return (
