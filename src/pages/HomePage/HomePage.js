@@ -1,7 +1,6 @@
 import axios from "axios";
 import { Box, Flex } from "@chakra-ui/react";
 import { useQuery } from "react-query";
-//import { RestaurantsService } from "../../services";
 import { environment } from "../../configs/environment";
 //import "react-table/react-table.css";
 import TableComponent from "../../components/HomePage/Table";
@@ -14,7 +13,10 @@ export default function HomePage() {
 
   let table;
 
-  //const { Load, Err, Data } = RestaurantsService.GetARestaurant();
+  if (error) {
+    console.log(error.message);
+  }
+
   if (!data) {
     if (isLoading) {
       table = <h1>Nop</h1>;
