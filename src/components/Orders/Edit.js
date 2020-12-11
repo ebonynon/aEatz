@@ -26,11 +26,11 @@ export default function EditComponent(props) {
   const btnRef = useRef();
   const formik = useFormik({
     initialValues: {
-      CusID: gData.ResID,
-      OrdID: gData.Name,
-      ResID: gData.Phone,
-      NoItems: gData.Location,
-      paymentWay: gData.ImgURL,
+      CusID: gData.CusID,
+      OrdID: gData.OrdID,
+      ResID: gData.ResID,
+      NoItems: gData.NoItems,
+      paymentWay: gData.paymentWay,
     },
 
     onSubmit: async (values, { resetForm }) => {

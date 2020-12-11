@@ -26,7 +26,7 @@ export default function TableComponent(props) {
           {value.CusID}
         </Box>
         <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
-          {value.CusID}
+          {value.OrdID}
         </Box>
         <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
           {value.ResID}
