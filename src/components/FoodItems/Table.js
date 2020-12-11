@@ -22,7 +22,7 @@ export default function TableComponent(props) {
       color={textColor[colorMode]}
     >
       <Grid templateColumns="repeat(6, 1fr)" gap={6}>
-      <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
+        <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
           {value.ItmID}
         </Box>
         <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
@@ -34,12 +34,12 @@ export default function TableComponent(props) {
         <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
           {value.ItmKind}
         </Box>
-        <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
+        {/* <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
           {value.smallPrice}
         </Box>
         <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
           {value.largePrice}
-        </Box>
+        </Box> */}
         <Box align="center">
           <EditComponent vl={value} />
         </Box>
