@@ -2,7 +2,6 @@ import axios from "axios";
 import { Box, Flex } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { environment } from "../../configs/environment";
-//import "react-table/react-table.css";
 import TableComponent from "../../components/HomePage/Table";
 import AddComponent from "../../components/HomePage/Add";
 
