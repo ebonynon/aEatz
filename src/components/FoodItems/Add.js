@@ -44,7 +44,7 @@ export default function AddComponent() {
         <Grid templateColumns="repeat(6, 1fr)" align="center" gap={6}>
           <GridItem colStart={6}>
             <Button leftIcon={<AddIcon />} colorScheme="teal" onClick={onOpen}>
-              Add Restaurant
+              Add Food Item
             </Button>
           </GridItem>
         </Grid>
