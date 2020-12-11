@@ -34,9 +34,9 @@ export default function TableComponent(props) {
         <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
           {value.NoItems}
         </Box>
-        <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
+        {/* <Box borderRadius="lg" p="1" bg={boxColor[colorMode]}>
           {value.paymentWay}
-        </Box>
+        </Box> */}
         <Box align="center">
           <EditComponent vl={value} />
         </Box>
