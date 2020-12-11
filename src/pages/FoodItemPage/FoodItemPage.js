@@ -2,8 +2,8 @@ import axios from "axios";
 import { Box, Flex } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { environment } from "../../configs/environment";
-import TableComponent from "../../components/FoodItems/Table";
-import AddComponent from "../../components/FoodItems/Add";
+import TableComponent from "../../components/FoodItemsPage/Table";
+import AddComponent from "../../components/FoodItemsPage/Add";
 
 
 export default function FoodItemPage() {

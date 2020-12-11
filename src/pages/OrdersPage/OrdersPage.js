@@ -2,8 +2,8 @@ import axios from "axios";
 import { Box, Flex } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { environment } from "../../configs/environment";
-import TableComponent from "../../components/Orders/Table";
-import AddComponent from "../../components/Orders/Add";
+import TableComponent from "../../components/OrdersPage/Table";
+import AddComponent from "../../components/OrdersPage/Add";
 
 export default function OrdersPage() {
   const { isLoading, error, data } = useQuery("repoData", () =>
