@@ -67,7 +67,7 @@ export default function EditComponent(props) {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Add New Food Item</DrawerHeader>
+            <DrawerHeader>Edit The Food Item</DrawerHeader>
             <DrawerBody>
               <Stack spacing={1}>
                 <Input

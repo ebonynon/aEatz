@@ -57,7 +57,7 @@ export default function EditComponent(props) {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Add New Restaurant</DrawerHeader>
+            <DrawerHeader>Edit The Restaurant</DrawerHeader>
             <DrawerBody>
               <Stack spacing={1}>
                 <Input

@@ -63,7 +63,7 @@ export default function EditComponent(props) {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Add New Order</DrawerHeader>
+            <DrawerHeader>Edit The Order</DrawerHeader>
             <DrawerBody>
               <Stack spacing={1}>
               <Input
