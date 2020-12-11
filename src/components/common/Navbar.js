@@ -51,7 +51,7 @@ export default function NavBar() {
             opacity={1}
           >
             <Link as={ReachLink} to="/">
-              <a>Restaurants</a>
+              Restaurants
             </Link>
           </Box>
           <Box
@@ -60,7 +60,7 @@ export default function NavBar() {
             opacity={1}
           >
             <Link as={ReachLink} to="/food-items">
-              <a>Food Items</a>
+              Food Items
             </Link>
           </Box>
           <Box
@@ -69,7 +69,7 @@ export default function NavBar() {
             opacity={1}
           >
             <Link as={ReachLink} to="/customers">
-              <a>Customers</a>
+              Customers
             </Link>
           </Box>
           <Box
@@ -78,7 +78,7 @@ export default function NavBar() {
             opacity={1}
           >
             <Link as={ReachLink} to="/orders">
-              <a>Orders</a>
+              Orders
             </Link>
           </Box>
         </Stack>
