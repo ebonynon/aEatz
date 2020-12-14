@@ -5,7 +5,6 @@ import { environment } from "../../configs/environment";
 import TableComponent from "../../components/FoodItemsPage/Table";
 import AddComponent from "../../components/FoodItemsPage/Add";
 
-
 export default function FoodItemPage() {
   const { isLoading, error, data } = useQuery("food-items", () =>
     axios.get(environment.baseURL + "/food-items/").then((res) => res.data)
@@ -22,7 +21,9 @@ export default function FoodItemPage() {
       table = <h1>Nop</h1>;
     }
   } else {
-    table = Object.values(data).map((value) => <TableComponent vl={value} />);
+    table = Object.entries(data).map(([key, value]) => (
+      <TableComponent key={key} vl={value} />
+    ));
   }
 
   return (

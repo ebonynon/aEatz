@@ -21,7 +21,9 @@ export default function OrdersPage() {
       table = <h1>Nop</h1>;
     }
   } else {
-    table = Object.values(data).map((value) => <TableComponent vl={value} />);
+    table = Object.entries(data).map(([key, value]) => (
+      <TableComponent key={key} vl={value} />
+    ));
   }
 
   return (
