@@ -1,24 +1,24 @@
 import axios from "axios";
 import { environment } from "../configs/environment";
 
-export function AddACustomers(data) {
+export async function AddACustomers(data) {
   console.log(data);
-  axios
+  await axios
     .post(environment.baseURL + "/customers/", data)
     .then((res) => console.log(res.status))
     .catch((err) => console.log(err.message));
 }
 
-export function UpdateACustomers(id, data) {
+export async function UpdateACustomers(id, data) {
   console.log(data);
-  axios
+  await axios
     .put(environment.baseURL + "/customers/" + id, data)
     .then((res) => console.log(res.status))
     .catch((err) => console.log(err.message));
 }
 
-export function DeleteACustomers(id) {
-  axios
+export async function DeleteACustomers(id) {
+  await axios
     .delete(environment.baseURL + "/customers/" + id)
     .then((res) => console.log(res.status))
     .catch((err) => console.log(err.message));

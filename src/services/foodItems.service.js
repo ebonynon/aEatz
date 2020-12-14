@@ -1,24 +1,24 @@
 import axios from "axios";
 import { environment } from "../configs/environment";
 
-export function AddAFoodItem(data) {
+export async function AddAFoodItem(data) {
   console.log(data);
-  axios
+  await axios
     .post(environment.baseURL + "/food-items/", data)
     .then((res) => console.log(res.status))
     .catch((err) => console.log(err.message));
 }
 
-export function UpdateAFoodItem(id, data) {
+export async function UpdateAFoodItem(id, data) {
   console.log(data);
-  axios
+  await axios
     .put(environment.baseURL + "/food-items/" + id, data)
     .then((res) => console.log(res.status))
     .catch((err) => console.log(err.message));
 }
 
-export function DeleteAFoodItem(id) {
-  axios
+export async function DeleteAFoodItem(id) {
+  await axios
     .delete(environment.baseURL + "/food-items/" + id)
     .then((res) => console.log(res.status))
     .catch((err) => console.log(err.message));
