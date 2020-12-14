@@ -6,7 +6,7 @@ import TableComponent from "../../components/CustomersPage/Table";
 import AddComponent from "../../components/CustomersPage/Add";
 
 export default function CustomersPage() {
-  const { isLoading, error, data } = useQuery("repoData", () =>
+  const { isLoading, error, data } = useQuery("customers", () =>
     axios.get(environment.baseURL + "/customers/").then((res) => res.data)
   );
 

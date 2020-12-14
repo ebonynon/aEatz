@@ -6,7 +6,7 @@ import TableComponent from "../../components/OrdersPage/Table";
 import AddComponent from "../../components/OrdersPage/Add";
 
 export default function OrdersPage() {
-  const { isLoading, error, data } = useQuery("repoData", () =>
+  const { isLoading, error, data } = useQuery("orders", () =>
     axios.get(environment.baseURL + "/orders/").then((res) => res.data)
   );
 

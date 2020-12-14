@@ -7,7 +7,7 @@ import AddComponent from "../../components/FoodItemsPage/Add";
 
 
 export default function FoodItemPage() {
-  const { isLoading, error, data } = useQuery("repoData", () =>
+  const { isLoading, error, data } = useQuery("food-items", () =>
     axios.get(environment.baseURL + "/food-items/").then((res) => res.data)
   );
 

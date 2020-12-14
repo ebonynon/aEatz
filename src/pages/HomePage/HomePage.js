@@ -6,7 +6,7 @@ import TableComponent from "../../components/HomePage/Table";
 import AddComponent from "../../components/HomePage/Add";
 
 export default function HomePage() {
-  const { isLoading, error, data } = useQuery("repoData", () =>
+  const { isLoading, error, data } = useQuery("restaurants", () =>
     axios.get(environment.baseURL + "/restaurants/").then((res) => res.data)
   );
 
