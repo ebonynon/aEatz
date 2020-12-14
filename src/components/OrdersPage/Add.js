@@ -34,6 +34,7 @@ export default function AddComponent() {
     onSubmit: async (values, { resetForm }) => {
       await OrdersService.AddAOrder(values);
       resetForm({});
+      onClose();
     },
   });
   return (

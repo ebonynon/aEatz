@@ -48,6 +48,7 @@ export default function EditComponent(props) {
           ImgURL: "",
         },
       });
+      onClose();
     },
   });
   return (

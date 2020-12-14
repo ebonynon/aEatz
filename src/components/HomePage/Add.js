@@ -34,6 +34,7 @@ export default function AddComponent() {
     onSubmit: async (values, { resetForm }) => {
       await RestaurantsService.AddARestaurant(values);
       resetForm({});
+      onClose();
     },
   });
   return (

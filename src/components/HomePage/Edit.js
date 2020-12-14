@@ -38,6 +38,7 @@ export default function EditComponent(props) {
       resetForm({
         values: { ResID: "", Name: "", Phone: "", Location: "", ImgURL: "" },
       });
+      onClose();
     },
   });
   return (

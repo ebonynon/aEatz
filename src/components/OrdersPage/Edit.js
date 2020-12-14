@@ -44,6 +44,7 @@ export default function EditComponent(props) {
           paymentWay: "",
         },
       });
+      onClose();
     },
   });
   return (
@@ -66,7 +67,7 @@ export default function EditComponent(props) {
             <DrawerHeader>Edit The Order</DrawerHeader>
             <DrawerBody>
               <Stack spacing={1}>
-              <Input
+                <Input
                   id="CusID"
                   placeholder="CusID"
                   value={formik.values.CusID}
